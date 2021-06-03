@@ -7,6 +7,9 @@ $navList = [
   "menu" => "Notre menu",
   "infos-legales" => "Informations légales"
 ];
+$pages = [
+  "accueil" => "accueil.php"
+];
 
 function displayNavItems()
 {
@@ -28,4 +31,20 @@ function headTitle()
     }
   }
   echo $title;
+}
+
+function setRoutes()
+{
+  global $pages;
+  $slug = array_key_first($_GET);
+  if (!array_key_exists($slug, $pages)) {
+    require "./src/pages/accueil.html";
+  } else {
+    foreach ($pages as $key => $file) {
+      if (!isset($_GET[$key]))
+        continue;
+      require "./src/pages/$file";
+      break;
+    }
+  }
 }
