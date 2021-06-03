@@ -9,8 +9,8 @@ nav {
       a {
         height: 100%;
         width: 100%;
-        background-image: linear-gradient(90deg, lighten($green1, 2.5%), $green1);
-        color: ghostwhite;
+        background-image: linear-gradient(90deg, lighten($Italy-green, 2.5%), $Italy-green);
+        color: $Italy-white;
         text-decoration: none;
         text-align: center;
         font-weight: bold;
@@ -19,7 +19,7 @@ nav {
         transition: background-image .5s ease-in-out;
 
         &:hover {
-          background-image: radial-gradient($red1, lighten($red1, 15%));
+          background-image: radial-gradient($Italy-red, lighten($Italy-red, 15%));
         }
       }
     }
