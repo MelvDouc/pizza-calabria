@@ -1,4 +1,5 @@
 nav {
+  font-size: 1.85rem;
   ul {
     list-style: none;
     display: flex;
@@ -6,12 +7,13 @@ nav {
     li {
       width: 100%;
       a {
+        height: 100%;
+        width: 100%;
         background-image: linear-gradient(90deg, lighten($green1, 2.5%), $green1);
         color: ghostwhite;
         text-decoration: none;
         text-align: center;
         font-weight: bold;
-        font-size: 1.85rem;
         padding: .5em;
         @extend %gridCenter;
         transition: background-image .5s ease-in-out;

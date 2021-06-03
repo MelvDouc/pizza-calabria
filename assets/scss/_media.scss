@@ -1,0 +1,38 @@
+@media only screen and (max-width: 900px) {
+  nav {
+    font-size: 1.5rem;
+  }
+  
+  #site-title {
+    font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  nav {
+    font-size: 1.2rem;
+  }
+
+  #site-title {
+    font-size: 3.85rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  nav {
+    font-size: 1rem;
+  }
+
+  #site-title {
+    font-size: 3.5rem;
+  }
+
+}
+
+@media only screen and (max-width: 450px) {
+  nav {
+    ul {
+      flex-direction: column;
+    }
+  }
+}
