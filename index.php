@@ -6,7 +6,7 @@ require "./src/functions.php";
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="./assets/img/logos/my-icon.png">
@@ -17,7 +17,9 @@ require "./src/functions.php";
 
 <body>
 
-  <?php include_once "./src/inc/header.inc.php" ?>
+  <?php include_once "./src/inc/header.inc.php"; ?>
+
+  <main><?php setRoutes(); ?></main>
 
 
 </body>
