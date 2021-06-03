@@ -2,20 +2,18 @@
 @import "utilities";
 
 html, body {
-  width: 100vw;
-}
-
-html {
+  max-width: 100vw;
   min-height: 100vh;
 }
 
 body {
+  height: calc(100vh + #{$footer-height});
   font-family: $ff1;
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 @import "header";
 @import "main";
+@import "footer";
 @import "media";
