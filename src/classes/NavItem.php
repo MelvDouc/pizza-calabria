@@ -14,7 +14,7 @@ class NavItem
   function display()
   {
     echo ("<li>
-      <a href='index.php?$this->slug'>$this->text</a>
+      <a href='?$this->slug'>$this->text</a>
     </li>");
   }
 }
