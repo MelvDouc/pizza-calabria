@@ -21,6 +21,8 @@ require "./src/functions.php";
 
   <main><?php setRoutes(); ?></main>
 
+  <?php include_once "./src/inc/footer.inc.html"; ?>
+
 
 </body>
 
