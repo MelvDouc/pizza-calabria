@@ -1,1 +1,13 @@
 @import "config";
+@import "utilities";
+
+html, body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  font-family: $ff1;
+}
+
+@import "header";
