@@ -1,9 +1,5 @@
 header {
-  @extend %backgroundStd;
-  background-image: url(../img/bg-pizza.jpg);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
 }
 
 @import "./components/nav";

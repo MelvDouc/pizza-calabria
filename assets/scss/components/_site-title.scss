@@ -1,5 +1,7 @@
 #site-title {
-  flex: 1;
+  height: 100%;
+  @extend %backgroundStd;
+  background-image: url(../img/bg-pizza.jpg);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
