@@ -8,7 +8,7 @@ $navList = [
   "infos-legales" => "Informations légales"
 ];
 $pages = [
-  "accueil" => "accueil.php"
+  "accueil" => "accueil.html"
 ];
 
 function displayNavItems()
@@ -37,14 +37,16 @@ function setRoutes()
 {
   global $pages;
   $slug = array_key_first($_GET);
+
   if (!array_key_exists($slug, $pages)) {
     require "./src/pages/accueil.html";
-  } else {
-    foreach ($pages as $key => $file) {
-      if (!isset($_GET[$key]))
-        continue;
-      require "./src/pages/$file";
-      break;
-    }
+    return;
+  }
+
+  foreach ($pages as $key => $file) {
+    if (!isset($_GET[$key]))
+      continue;
+    require "./src/pages/$file";
+    break;
   }
 }
