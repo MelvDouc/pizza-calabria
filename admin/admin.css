@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100vw;
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+a[type="button"] {
+  text-decoration: none;
+  border-radius: 5px;
+  padding: .33em .5em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-align: center;
+  background-color: blue;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.25rem;
+  padding: .5em;
+  margin-bottom: 1em;
+  display: grid;
+  place-items: center;
+  background-color: #333;
+  color: white;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid black;
+}
+
+thead {
+  background-color: rgb(0, 140, 69);
+  color: rgb(244, 245, 240);
+  font-size: 1.5rem;
+}
+
+th {
+  padding: .5em;
+}
+
+td {
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  padding: .5em;
+}
+
+form {
+  display: flex;
+  gap: 1em;
+}
+
+form img {
+  max-height: 250px;
+}
+
+.table-center {
+  width: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.table-center img {
+  max-width: 200px;
+}
+
+.form-group {
+  margin-bottom: 1em;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: .33em;
+}
