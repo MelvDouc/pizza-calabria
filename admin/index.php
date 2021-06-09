@@ -1,6 +1,6 @@
 <?php
+session_start();
 require "../src/processing/db.php";
-$pizzas = $db->query("SELECT * FROM pizzas");
 ?>
 
 <!DOCTYPE html>
@@ -18,53 +18,23 @@ $pizzas = $db->query("SELECT * FROM pizzas");
 <body>
 
   <?php
-  if (isset($_GET["modifier"])) {
-    require "./pages/update.php";
-    return;
+
+  switch (array_key_first($_GET)) {
+    case "modifier":
+      require "./pages/update.php";
+      break;
+    case "voir-pizzas":
+      require "./pages/read.php";
+      break;
+    case "nouvel-admin":
+      require "./pages/create-admin.php";
+      break;
+    default:
+      require "./pages/login.php";
   }
   ?>
 
-  <h1>Les Pizzas</h1>
 
-  <?php require_once "./sidebar.php"; ?>
-
-  <main>
-    <table>
-      <thead>
-        <th>Nom</th>
-        <th>Ingrédients</th>
-        <th>Prix normal</th>
-        <th>Prix familial</th>
-        <th>Image</th>
-        <th>Catégorie</th>
-        <th>Action</th>
-      </thead>
-      <tbody>
-        <?php while ($pizza = $pizzas->fetch()) : extract($pizza); ?>
-          <tr>
-            <td><?= $nom ?></td>
-            <td><?= $ingredients ?></td>
-            <td><?= $prix_normal ?></td>
-            <td><?= $prix_familial ?></td>
-            <td>
-              <div class="table-center">
-                <?php if ($image) : ?>
-                  <img src="../assets/img/pizzas/<?= $image ?>" alt="<?= $nom ?>" />
-                <?php endif; ?>
-              </div>
-            </td>
-            <td></td>
-            <td>
-              <div class="table-center">
-                <a href="./?modifier&id=<?= $id ?>" type="button" style="margin-bottom:1em;">Modifier</a>
-                <a href="../src/processing/processing.php?delete&id=<?= $id ?>" type="button">Supprimer</a>
-              </div>
-            </td>
-          </tr>
-        <?php endwhile; ?>
-      </tbody>
-    </table>
-  </main>
 
 
 </body>
